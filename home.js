@@ -143,8 +143,7 @@ function done() {
 
       Email.send({
         Host: "smtp.gmail.com",
-        Username : "site.pizza.example@gmail.com",
-        Password : "pizza2022@",
+       
         To : email1,
         From : "site.pizza.example@gmail.com",
         Subject : `Comanda pizza Exemplu #${comanda}`,
