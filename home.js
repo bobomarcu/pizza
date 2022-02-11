@@ -142,7 +142,7 @@ function done() {
       console.log(comanda)
 
       Email.send({
-        SecureToken : "d2cc0c6b-c106-4ac6-ba43-ad2d720edbcb",
+        SecureToken : "ddfd9663f-9587-4594-8763-6ce94b133eba",
         To : email1,
         From : "site.pizza.example@gmail.com",
         Subject : `Comanda pizza Exemplu #${comanda}`,
