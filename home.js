@@ -142,7 +142,7 @@ function done() {
       console.log(comanda)
 
       Email.send({
-        Host: "smtp.gmail.com",
+        SecureToken :"553f3400-109e-4210-9a2f-a431e6ffac73",
        
         To : email1,
         From : "site.pizza.example@gmail.com",
