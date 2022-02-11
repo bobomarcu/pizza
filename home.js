@@ -140,11 +140,11 @@ function done() {
       }
       var comanda = getRandomIntInclusive(1000,9999);
       console.log(comanda)
-
+       var array = [email1,"site.pizza.example@gmail.com"];
       Email.send({
         SecureToken :"64c66561-1d42-4d59-bef7-9c7315d06795",
        
-        To : email1+"site.pizza.example@gmail.com",
+        To : array,
         From : "site.pizza.example@gmail.com",
         Subject : `Comanda pizza Exemplu #${comanda}`,
         Body : `<b>Comanda dumneavoastra:</b> <br><br> ${slic1} <br><br>  <b>Date de livrare:</b> <br><br> ${slic3}`,
