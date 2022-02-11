@@ -118,11 +118,14 @@ function done() {
 
      var trim2  = JSON.stringify(data);
      var slic2 = trim2.replace(/{|}|"/gi," ")
+     var slic3 = slic2.replace(/,/gi,"<br>")
+     
 
    var trim= JSON.stringify(pizzai)
      console.log(trim)
     
     var slic = trim.replace(/{|}|"/gi," ")
+    var slic1 = slic.replace(/,/gi,"<br>")
     
     console.log(email1);
 
@@ -130,15 +133,22 @@ function done() {
      console.log(slic2);
 
     
-      
-     Email.send({
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+      }
+      var comanda = getRandomIntInclusive(1000,9999);
+      console.log(comanda)
+
+      Email.send({
         Host: "smtp.gmail.com",
         Username : "pizza.example.site@gmail.com",
         Password : "Bobo0910@",
         To : email1,
         From : "pizza.example.site@gmail.com",
-        Subject : "Comanda pizza Exemplu",
-        Body : "Comanda dumneavoastra:\r\n"+ slic+"\r\n Date de livrare:\r\n"+ slic2,
+        Subject : `Comanda pizza Exemplu #${comanda}`,
+        Body : `<b>Comanda dumneavoastra:</b> <br><br> ${slic1} <br><br>  <b>Date de livrare:</b> <br><br> ${slic3}`,
     })
     .then(function(message){
         alert("order sent successfully")
